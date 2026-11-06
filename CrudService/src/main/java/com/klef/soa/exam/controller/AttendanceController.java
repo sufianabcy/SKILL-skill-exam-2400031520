@@ -66,4 +66,16 @@ public class AttendanceController
         }
         return new ResponseEntity<>("Attendance not found with id : " + id, HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/DisplayByName/{name}")
+    public ResponseEntity<List<Attendance>> displayByName(@PathVariable String name) 
+    {
+        return ResponseEntity.ok(service.getAttendanceByName(name));
+    }
+
+    @GetMapping("/DisplayByType/{type}")
+    public ResponseEntity<List<Attendance>> displayByType(@PathVariable String type) 
+    {
+        return ResponseEntity.ok(service.getAttendanceByType(type));
+    }
 }

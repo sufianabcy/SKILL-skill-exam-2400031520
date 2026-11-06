@@ -53,4 +53,14 @@ public class AttendanceService
     {
         return repository.findById(id).orElse(null);
     }
+
+    public List<Attendance> getAttendanceByName(String name) 
+    {
+        return repository.findByName(name);
+    }
+
+    public List<Attendance> getAttendanceByType(String type) 
+    {
+        return repository.findByType(type);
+    }
 }

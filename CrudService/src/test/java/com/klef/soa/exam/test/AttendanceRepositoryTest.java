@@ -23,7 +23,7 @@ public class AttendanceRepositoryTest
     @Autowired
     private AttendanceRepository repository;
 
-    // Test 1 - Find All
+    // Test 1:Find All
     @Test
     void testFindAllAttendance() 
     {
@@ -33,7 +33,7 @@ public class AttendanceRepositoryTest
         System.out.println("Total Attendance Records: " + list.size());
     }
 
-    // Test 2 - Find by ID
+    // Test 2:Find by ID
     @Test
     void testFindAttendanceById() 
     {
@@ -43,17 +43,17 @@ public class AttendanceRepositoryTest
         System.out.println("Name: " + attendance.get().getName());
     }
 
-    // Test 3 - Find by Derived Query (findByName)
+    // Test 3:Find by Name
     @Test
     void testFindByName() 
     {
-        List<Attendance> list = repository.findByName("Priya");
+        List<Attendance> list = repository.findByName("Nischal");
         assertFalse(list.isEmpty());
-        assertEquals("Priya", list.get(0).getName());
+        assertEquals("Nischal", list.get(0).getName());
         System.out.println("Type: " + list.get(0).getType());
     }
 
-    // Test 4 - Count
+    // Test 4:Count
     @Test
     void testAttendanceCount() 
     {
@@ -62,7 +62,7 @@ public class AttendanceRepositoryTest
         System.out.println("Total Attendance in Database: " + count);
     }
 
-    // Test 5 - Entity Details / Property-Based Result (findByType)
+    // Test 5:Find by type
     @Test
     void testAttendanceDetails() 
     {
