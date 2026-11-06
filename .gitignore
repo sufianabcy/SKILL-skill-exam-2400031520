@@ -1,0 +1,12 @@
+target/
+.metadata/
+.settings/
+.classpath
+.project
+.factorypath
+.idea/
+*.iml
+.vscode/
+.DS_Store
+*.pem
+_to_delete/
